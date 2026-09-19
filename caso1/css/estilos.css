@@ -1,5 +1,6 @@
 /* =========================================================
    Centro de control de expedición científica
+   Enfoque mobile-first. Breakpoints: tableta 601px, escritorio 1024px
    ========================================================= */
 
 :root {
@@ -51,7 +52,7 @@ ul, ol {
   padding: 0;
 }
 
-/*---------- Cabecera (position: sticky) ----------*/
+/* ---------- Cabecera (position: sticky) ---------- */
 .cabecera {
   position: sticky;
   top: 0;
@@ -89,7 +90,7 @@ ul, ol {
   color: var(--color-principal);
 }
 
-/*---------- Navegación (Flexbox) ----------*/
+/* ---------- Navegación (Flexbox) ---------- */
 .nav {
   position: sticky;
   top: 3.6rem;
@@ -117,7 +118,7 @@ ul, ol {
   color: var(--color-principal);
 }
 
-/*---------- Layout principal: mobile = una columna ----------*/
+/* ---------- Layout principal: mobile = una columna ---------- */
 .contenedor-principal {
   display: grid;
   grid-template-columns: 1fr;
@@ -132,7 +133,7 @@ ul, ol {
   padding: var(--espacio-m);
 }
 
-/*---------- Resumen: indicadores con Flexbox ----------*/
+/* ---------- Resumen: indicadores con Flexbox ---------- */
 .resumen__indicadores {
   display: flex;
   flex-wrap: wrap;
@@ -176,7 +177,7 @@ ul, ol {
   color: var(--color-texto-tenue);
 }
 
-/*---------- Misiones ----------*/
+/* ---------- Misiones ---------- */
 .lista-misiones {
   display: flex;
   flex-direction: column;
@@ -227,7 +228,7 @@ ul, ol {
 .estado--suspendida { color: var(--color-alerta); }
 .estado--completada { color: var(--color-texto-tenue); }
 
-/*---------- Alertas ----------*/
+/* ---------- Alertas ---------- */
 .lista-alertas {
   display: flex;
   flex-direction: column;
@@ -261,3 +262,51 @@ ul, ol {
   font-size: 0.8rem;
   color: var(--color-texto-tenue);
 }
+
+/* ---------- Equipos: CSS Grid ---------- */
+.grid-equipos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-s);
+}
+
+.equipo {
+  background-color: var(--color-superficie-alt);
+  border-radius: var(--radio-s);
+  padding: var(--espacio-s);
+}
+
+.equipo p {
+  font-size: 0.85rem;
+  color: var(--color-texto-tenue);
+}
+
+/* ---------- Agenda ---------- */
+.lista-agenda li {
+  display: flex;
+  gap: var(--espacio-s);
+  padding: var(--espacio-xs) 0;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 0.9rem;
+}
+
+.lista-agenda li:last-child {
+  border-bottom: none;
+}
+
+.agenda__hora {
+  color: var(--color-principal);
+  font-weight: bold;
+  min-width: 3.2rem;
+}
+
+.pie {
+  text-align: center;
+  padding: var(--espacio-m);
+  color: var(--color-texto-tenue);
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   Tableta: 601px en adelante
+   ========================================================= */
