@@ -310,3 +310,10 @@ ul, ol {
 /* =========================================================
    Tableta: 601px en adelante
    ========================================================= */
+
+/* Ajuste de posicionamiento: evitar que la cabecera y el nav (sticky)
+   tapen el inicio de cada sección al navegar por los enlaces del menú */
+section[id],
+aside[id] {
+  scroll-margin-top: 6.5rem;
+}
