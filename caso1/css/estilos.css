@@ -307,13 +307,62 @@ ul, ol {
   font-size: 0.8rem;
 }
 
-/* =========================================================
-   Tableta: 601px en adelante
-   ========================================================= */
-
-/* Ajuste de posicionamiento: evitar que la cabecera y el nav (sticky)
-   tapen el inicio de cada sección al navegar por los enlaces del menú */
+/* Evitar que la cabecera y el nav (sticky) tapen el inicio de cada
+   sección al navegar por los enlaces del menú */
 section[id],
 aside[id] {
   scroll-margin-top: 6.5rem;
+}
+
+/* =========================================================
+   Tableta: 601px en adelante
+   ========================================================= */
+@media (min-width: 601px) {
+  .contenedor-principal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resumen,
+  .agenda {
+    grid-column: span 2;
+  }
+
+  .grid-equipos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .indicador {
+    flex: 1 1 22%;
+  }
+
+  .indicador--grande {
+    flex-basis: 100%;
+  }
+}
+
+/* =========================================================
+   Escritorio: 1024px en adelante
+   ========================================================= */
+@media (min-width: 1024px) {
+  .contenedor-principal {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "resumen resumen equipos"
+      "misiones alertas equipos"
+      "misiones agenda agenda";
+  }
+
+  .resumen { grid-area: resumen; grid-column: auto; }
+  .misiones { grid-area: misiones; }
+  .alertas { grid-area: alertas; }
+  .equipos { grid-area: equipos; }
+  .agenda { grid-area: agenda; grid-column: auto; }
+
+  .grid-equipos {
+    grid-template-columns: 1fr;
+  }
+
+  .indicador--grande {
+    flex-basis: 100%;
+  }
 }
