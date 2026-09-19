@@ -1,0 +1,119 @@
+/* =========================================================
+   Centro de control de expedición científica
+   Enfoque mobile-first. Breakpoints: tableta 601px, escritorio 1024px
+   ========================================================= */
+
+:root {
+  --color-fondo: #0f1720;
+  --color-superficie: #182430;
+  --color-superficie-alt: #1f2f3d;
+  --color-texto: #e8eef2;
+  --color-texto-tenue: #a7b6c2;
+  --color-principal: #35c2a3;
+  --color-alerta: #e2574c;
+  --color-advertencia: #e0a63e;
+  --color-borde: #2b3b48;
+
+  --espacio-xs: 0.4rem;
+  --espacio-s: 0.8rem;
+  --espacio-m: 1.2rem;
+  --espacio-l: 2rem;
+
+  --radio-s: 0.4rem;
+  --radio-m: 0.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0 0 var(--espacio-s) 0;
+}
+
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.1rem; border-bottom: 1px solid var(--color-borde); padding-bottom: var(--espacio-xs); }
+h3 { font-size: 1rem; }
+
+p { margin: 0.25rem 0; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Cabecera (position: sticky) ---------- */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  background-color: var(--color-superficie);
+  padding: var(--espacio-m);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.cabecera__ubicacion {
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+}
+
+.cabecera__estado {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  flex-wrap: wrap;
+}
+
+.cabecera__dia {
+  font-size: 0.85rem;
+  color: var(--color-texto-tenue);
+}
+
+.pastilla {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: rgba(53, 194, 163, 0.15);
+  color: var(--color-principal);
+}
+
+/* ---------- Navegación (Flexbox) ---------- */
+.nav {
+  position: sticky;
+  top: 3.6rem;
+  z-index: 15;
+  background-color: var(--color-superficie-alt);
+  border-bottom: 1px solid var(--color-borde);
+  overflow-x: auto;
+}
+
+.nav__lista {
+  display: flex;
+  gap: var(--espacio-m);
+  padding: var(--espacio-s) var(--espacio-m);
+}
+
+.nav__lista a {
+  color: var(--color-texto-tenue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav__lista a:hover,
+.nav__lista a:focus {
+  color: var(--color-principal);
+}

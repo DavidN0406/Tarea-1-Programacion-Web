@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Control · Expedición Bosque Nuboso 2026</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="cabecera__titulo">
+      <h1>Expedición Bosque Nuboso 2026</h1>
+      <p class="cabecera__ubicacion">Estación Biológica Monteverde</p>
+    </div>
+    <div class="cabecera__estado">
+      <span class="cabecera__dia">Día 4 de 7</span>
+      <span class="pastilla pastilla--activa">● Operaciones activas</span>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <ul class="nav__lista">
+      <li><a href="#resumen">Resumen</a></li>
+      <li><a href="#misiones">Misiones</a></li>
+      <li><a href="#equipos">Equipos</a></li>
+      <li><a href="#alertas">Alertas</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor-principal">
+
+    <section id="resumen" class="tarjeta resumen" aria-labelledby="resumen-titulo">
+      <h2 id="resumen-titulo">Resumen de operaciones</h2>
+      <div class="resumen__indicadores">
+        <div class="indicador indicador--grande">
+          <span class="indicador__numero">18</span>
+          <span class="indicador__etiqueta">Investigadores activos</span>
+        </div>
+        <div class="indicador">
+          <span class="indicador__numero">5</span>
+          <span class="indicador__etiqueta">Misiones en progreso</span>
+        </div>
+        <div class="indicador">
+          <span class="indicador__numero">7</span>
+          <span class="indicador__etiqueta">Misiones completadas</span>
+        </div>
+        <div class="indicador indicador--alerta">
+          <span class="indicador__numero">4</span>
+          <span class="indicador__etiqueta">Alertas pendientes</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="misiones" class="tarjeta misiones" aria-labelledby="misiones-titulo">
+      <h2 id="misiones-titulo">Misiones activas</h2>
+      <ul class="lista-misiones">
+        <li class="mision">
+          <div class="mision__encabezado">
+            <h3>Monitoreo de anfibios</h3>
+            <span class="estado estado--progreso">▶ En progreso</span>
+          </div>
+          <p class="mision__detalle">Equipo Biología · Sendero Norte · 08:30–11:30</p>
+          <span class="prioridad prioridad--alta">Prioridad alta</span>
+        </li>
+        <li class="mision">
+          <div class="mision__encabezado">
+            <h3>Muestreo de agua</h3>
+            <span class="estado estado--pendiente">◷ Pendiente</span>
+          </div>
+          <p class="mision__detalle">Equipo Hidrología · Río Guacimal · 13:00–15:00</p>
+          <span class="prioridad prioridad--media">Prioridad media</span>
+        </li>
+        <li class="mision">
+          <div class="mision__encabezado">
+            <h3>Estación meteorológica</h3>
+            <span class="estado estado--suspendida">■ Suspendida</span>
+          </div>
+          <p class="mision__detalle">Equipo Meteorología · Mirador Sur · 09:00–10:00</p>
+          <span class="prioridad prioridad--media">Prioridad media</span>
+        </li>
+        <li class="mision">
+          <div class="mision__encabezado">
+            <h3>Cartografía de suelos</h3>
+            <span class="estado estado--completada">✔ Completada</span>
+          </div>
+          <p class="mision__detalle">Equipo Geología · Ladera Este · 07:00–09:30</p>
+          <span class="prioridad prioridad--baja">Prioridad baja</span>
+        </li>
+        <li class="mision">
+          <div class="mision__encabezado">
+            <h3>Registro fotográfico de fauna</h3>
+            <span class="estado estado--progreso">▶ En progreso</span>
+          </div>
+          <p class="mision__detalle">Equipo Biología · Sendero Central · 10:00–14:00</p>
+          <span class="prioridad prioridad--alta">Prioridad alta</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="alertas" class="tarjeta alertas" aria-labelledby="alertas-titulo">
+      <h2 id="alertas-titulo">Alertas</h2>
+      <ul class="lista-alertas">
+        <li class="alerta alerta--critica">
+          <span class="alerta__icono" aria-hidden="true">⚠</span>
+          <div>
+            <p class="alerta__titulo">Crítica: sensor meteorológico sin conexión</p>
+            <p class="alerta__detalle">Mirador Sur · sin datos hace 40 min</p>
+          </div>
+        </li>
+        <li class="alerta alerta--critica">
+          <span class="alerta__icono" aria-hidden="true">⚠</span>
+          <div>
+            <p class="alerta__titulo">Crítica: lluvia intensa en el sector norte</p>
+            <p class="alerta__detalle">Riesgo para el equipo de Biología</p>
+          </div>
+        </li>
+        <li class="alerta alerta--info">
+          <span class="alerta__icono" aria-hidden="true">ℹ</span>
+          <div>
+            <p class="alerta__titulo">Informativa: retraso en misión de hidrología</p>
+            <p class="alerta__detalle">Reinicio estimado en 20 min</p>
+          </div>
+        </li>
+        <li class="alerta alerta--info">
+          <span class="alerta__icono" aria-hidden="true">ℹ</span>
+          <div>
+            <p class="alerta__titulo">Informativa: batería baja en equipo remoto</p>
+            <p class="alerta__detalle">Estación Ladera Este · 15% restante</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="equipos" class="tarjeta equipos" aria-labelledby="equipos-titulo">
+      <h2 id="equipos-titulo">Equipos científicos</h2>
+      <div class="grid-equipos">
+        <article class="equipo">
+          <h3>Biología</h3>
+          <p>6 integrantes</p>
+          <p>Misión actual: Monitoreo de anfibios</p>
+          <p>Estado: <span class="estado estado--progreso">En progreso</span></p>
+          <p>Próxima actividad: 14:00 · Registro fotográfico</p>
+        </article>
+        <article class="equipo">
+          <h3>Hidrología</h3>
+          <p>4 integrantes</p>
+          <p>Misión actual: Muestreo de agua</p>
+          <p>Estado: <span class="estado estado--pendiente">Pendiente</span></p>
+          <p>Próxima actividad: 13:00 · Río Guacimal</p>
+        </article>
+        <article class="equipo">
+          <h3>Meteorología</h3>
+          <p>3 integrantes</p>
+          <p>Misión actual: Estación meteorológica</p>
+          <p>Estado: <span class="estado estado--suspendida">Suspendida</span></p>
+          <p>Próxima actividad: 16:00 · Revisión de sensores</p>
+        </article>
+        <article class="equipo">
+          <h3>Geología</h3>
+          <p>5 integrantes</p>
+          <p>Misión actual: Cartografía de suelos</p>
+          <p>Estado: <span class="estado estado--completada">Completada</span></p>
+          <p>Próxima actividad: 15:30 · Análisis de muestras</p>
+        </article>
+      </div>
+    </section>
+
+    <aside id="agenda" class="tarjeta agenda" aria-labelledby="agenda-titulo">
+      <h2 id="agenda-titulo">Próximas actividades</h2>
+      <ol class="lista-agenda">
+        <li><span class="agenda__hora">13:00</span> Muestreo de agua · Equipo Hidrología</li>
+        <li><span class="agenda__hora">14:00</span> Registro fotográfico · Equipo Biología</li>
+        <li><span class="agenda__hora">15:30</span> Análisis de muestras · Equipo Geología</li>
+        <li><span class="agenda__hora">16:00</span> Revisión de sensores · Equipo Meteorología</li>
+        <li><span class="agenda__hora">18:00</span> Reunión de coordinación general</li>
+      </ol>
+    </aside>
+
+  </main>
+
+  <footer class="pie">
+    <p>Centro de control de expedición · Uso interno del equipo coordinador</p>
+  </footer>
+
+</body>
+</html>
