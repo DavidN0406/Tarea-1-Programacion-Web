@@ -366,3 +366,15 @@ aside[id] {
     flex-basis: 100%;
   }
 }
+
+/* Corrección final: asegurar que cualquier imagen futura sea adaptable
+   y no provoque desplazamiento horizontal */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
+}

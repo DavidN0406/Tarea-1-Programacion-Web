@@ -90,98 +90,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* ---------- Layout principal: teléfono = una columna ---------- */
-/* =========================================================
-   Panel público de información de un festival
-   Enfoque estrictamente mobile-first. Breakpoints: 601px, 1024px
-   ========================================================= */
-
-:root {
-  --color-fondo: #fdf8f2;
-  --color-superficie: #ffffff;
-  --color-texto: #2b2118;
-  --color-texto-tenue: #7a6a5a;
-  --color-principal: #d9552c;
-  --color-secundario: #2f7a63;
-  --color-borde: #ecdfd0;
-  --color-cambio: #c0392b;
-
-  --espacio-xs: 0.4rem;
-  --espacio-s: 0.8rem;
-  --espacio-m: 1.2rem;
-  --espacio-l: 2rem;
-
-  --radio-s: 0.5rem;
-  --radio-m: 1rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  line-height: 1.5;
-}
-
-h1, h2, h3 {
-  margin: 0 0 var(--espacio-xs) 0;
-  line-height: 1.2;
-}
-
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.1rem; color: var(--color-principal); }
-h3 { font-size: 1rem; }
-
-p { margin: 0.25rem 0; }
-
-ul { list-style: none; margin: 0; padding: 0; }
-
-/* ---------- Cabecera ---------- */
-.cabecera {
-  background-color: var(--color-principal);
-  color: #fff;
-  padding: var(--espacio-m);
-}
-
-.cabecera h1 { margin-bottom: 0.2rem; }
-
-.cabecera__info {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-/* ---------- Navegación (Flexbox + sticky en teléfono) ---------- */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background-color: var(--color-superficie);
-  border-bottom: 1px solid var(--color-borde);
-  overflow-x: auto;
-}
-
-.nav__lista {
-  display: flex;
-  gap: var(--espacio-m);
-  padding: var(--espacio-s) var(--espacio-m);
-}
-
-.nav__lista a {
-  color: var(--color-texto-tenue);
-  text-decoration: none;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.nav__lista a:hover,
-.nav__lista a:focus {
-  color: var(--color-principal);
-}
-
-/* ---------- Layout principal: teléfono = una columna ---------- */
 .contenedor-principal {
   display: grid;
   grid-template-columns: 1fr;
@@ -364,4 +272,16 @@ ul { list-style: none; margin: 0; padding: 0; }
   .servicio {
     flex: 1 1 18%;
   }
+}
+
+/* Corrección final: asegurar que cualquier imagen futura sea adaptable
+   y no provoque desplazamiento horizontal */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
 }
